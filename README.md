@@ -75,7 +75,7 @@ python3.6 eval.py --eval_imgs='/PATH/TO/THE/TO/BE/EVALED/IMAGES/'
 ```   
 
 ## Some results 
-[the more results](https://github.com/Ixiaohuihuihui/PCB-defect-detection/tree/master/tools/inference_results)
+All demo results can be checked in the demo_results folder.
 ![1](01_missing_hole_01.jpg)
 ![2](04_mouse_bite_10.jpg)
 
