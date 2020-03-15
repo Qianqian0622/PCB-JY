@@ -49,7 +49,7 @@ python3.6 -m pip install opencv-python
 ```
 python3.6 -m pip install PACKAGE_name
 ```
-
+In the original project, the environment is 1.python2.7 (anaconda recommend) 2、CUDA Version 8.0.44 , CUDNN=5.1.10 (For GPU user) 3、opencv(cv2) 4、tfplot 5、tensorflow == 1.121. I changed the codes a little and it's now compilable for CPU user. If you have GPU on your laptop and would like to use it, you could also check the original website for this project.
 
 ## Step 4: Change Working Directory
 1. `$PATH_ROOT/⁨libs⁩/configs⁩/cfgs.py`: line37, change test_annotate_path to your own path
