@@ -56,15 +56,17 @@ python3.6 -m pip install PACKAGE_name
 2. `$PATH_ROOT/output/trained_weights/FPN_Res101_0117_OHEM/checkpoint`: change the two working directory to your own path  **(TODO: maybe need to specify how to change it with emacs?)**
 
 ## Step 5: Image Inference
-Make a new folder to put images after detecting, and get the working directory of your downloaded dataset (`data_dir`) and the new folder (`save_dir`). Run the code below, and you will find the detected results of images in the new folder.
+Make a new folder to put images after detecting, and get the working directory of your downloaded dataset (`data_dir`) and the new folder (`save_dir`). Run the code below, and you will find the detected results of images in the new folder. Here the images should all be extracted out from different folders. That is to say you need to confirm that the files under path '/PATH/TO/THE/TO/BE/DETECTED/IMAGES/' (depends on your PCB_DATASET directory) should be jpg files but not folders.(Missing_hole,Spur,...). After extracting out the jpg files directly under your image path, you could run the following commands in your terminal.
 ```
 cd $PATH_ROOT/tools
 python3.6 inference.py --data_dir='/PATH/TO/THE/TO/BE/DETECTED/IMAGES/' 
                        --save_dir='/PATH/TO/SAVE/THE/DETECTED/IMAGES/'
 ```
 
+Here for simplicity, if you find its too long to run all the images in PCB_DATASET, you could first use demo_backup under in the tools folder I provided, which is a sample of the images from PCB_DATASET. 
+
 ## Step 6: Inference Evaluation
-Run the code below, you will get the precision, recall and AP of per defect type.
+Run the code below, you will get the precision, recall and AP of per defect type. Again, you could use the demo to run first. To get the corresponding demo test_annotation for demo model evaluation , you could check test_annotation_demo_creation.ipynb and follow the codes. Make a new directory called test_annotation in the tools folders and run codes in test_annotation_demo_creation.ipynb to get the corresponding *.xml files for demo test_annotation.
 ```  
 cd $PATH_ROOT/tools
 python3.6 eval.py --eval_imgs='/PATH/TO/THE/TO/BE/EVALED/IMAGES/'  
