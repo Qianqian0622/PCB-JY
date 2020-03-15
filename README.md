@@ -63,7 +63,7 @@ python3.6 inference.py --data_dir='/PATH/TO/THE/TO/BE/DETECTED/IMAGES/'
                        --save_dir='/PATH/TO/SAVE/THE/DETECTED/IMAGES/'
 ```
 
-Here for simplicity, if you find its too long to run all the images in PCB_DATASET, you could first use demo_backup under in the tools folder I provided, which is a sample of the images from PCB_DATASET. 
+Here for simplicity, if you find its too long to run all the images in PCB_DATASET, you could first use demo_backup in the tools folder I provided, which is a sample of the images from PCB_DATASET. 
 
 ## Step 6: Inference Evaluation
 Run the code below, you will get the precision, recall and AP of per defect type. Again, you could use the demo to run first. To get the corresponding demo test_annotation for demo model evaluation , you could check test_annotation_demo_creation.ipynb and follow the codes. Make a new directory called test_annotation in the tools folders and run codes in test_annotation_demo_creation.ipynb to get the corresponding *.xml files for demo test_annotation.
